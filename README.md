@@ -1,53 +1,53 @@
 # Base NFT Contract
 
-قرارداد ساده و امن ERC-721 برای دیپلوی روی شبکه [Base](https://base.org)، ساخته‌شده روی کتابخانه‌های استاندارد و تست‌شده OpenZeppelin.
+A simple, secure ERC-721 contract for deployment on [Base](https://base.org), built on OpenZeppelin's audited, battle-tested libraries.
 
-## امکانات
-- Mint عمومی با قیمت ثابت (قابل تغییر توسط owner)
-- سقف عرضه (Max Supply)
-- Mint اختصاصی owner (برای تیم/گیواوی)
-- برداشت ETH جمع‌شده توسط owner
-- محافظت در برابر Reentrancy
+## Features
+- Public mint at a fixed price (owner-adjustable)
+- Max supply cap
+- Owner-only mint (for team allocation / giveaways)
+- Owner withdrawal of collected ETH
+- Reentrancy protection
 
-## پیش‌نیاز
-- Node.js نسخه ۱۸ یا بالاتر
-- یک کیف پول با کمی ETH روی Base (یا Base Sepolia برای تست)
+## Requirements
+- Node.js v18 or later
+- A wallet with some ETH on Base (or Base Sepolia for testing)
 
-## نصب
+## Install
 
 ```bash
 npm install
 cp .env.example .env
-# مقدار PRIVATE_KEY و در صورت تمایل BASESCAN_API_KEY رو داخل .env بذار
+# Fill in PRIVATE_KEY and (optionally) BASESCAN_API_KEY in .env
 ```
 
-## کامپایل و تست
+## Compile & Test
 
 ```bash
 npm run compile
 npm test
 ```
 
-## دیپلوی
+## Deploy
 
-دیپلوی روی شبکه تست (Base Sepolia) — پیشنهاد می‌شود اول اینجا تست کنید:
+Deploy to the testnet (Base Sepolia) first — recommended before mainnet:
 ```bash
 npm run deploy:baseSepolia
 ```
 
-دیپلوی روی Base اصلی (mainnet):
+Deploy to Base mainnet:
 ```bash
 npm run deploy:base
 ```
 
-## نکات مهم قبل از دیپلوی واقعی
-1. آدرس `baseURI` را در `scripts/deploy.js` با CID متادیتای واقعی (روی IPFS) جایگزین کنید.
-2. کلید خصوصی (`PRIVATE_KEY`) را هرگز commit نکنید؛ فایل `.env` در `.gitignore` قرار دارد.
-3. قبل از mainnet، حتماً روی Base Sepolia تست کامل انجام دهید.
-4. توصیه می‌شود قرارداد را قبل از استفاده واقعی توسط یک متخصص امنیت بازبینی (audit) کنید.
+## Important notes before a real deployment
+1. Replace the `baseURI` in `scripts/deploy.js` with your actual metadata CID (hosted on IPFS).
+2. Never commit your private key — `.env` is already in `.gitignore`.
+3. Test thoroughly on Base Sepolia before deploying to mainnet.
+4. Consider having the contract reviewed by a security professional before real usage.
 
-## شبکه‌ها
-| شبکه | Chain ID | RPC |
+## Networks
+| Network | Chain ID | RPC |
 |---|---|---|
 | Base Mainnet | 8453 | https://mainnet.base.org |
 | Base Sepolia (testnet) | 84532 | https://sepolia.base.org |
