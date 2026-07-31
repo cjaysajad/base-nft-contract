@@ -1,6 +1,7 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config();
 
+
 const PRIVATE_KEY = process.env.PRIVATE_KEY || "";
 const BASESCAN_API_KEY = process.env.BASESCAN_API_KEY || "";
 
