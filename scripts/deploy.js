@@ -14,7 +14,6 @@ async function main() {
 
   console.log("SimpleNFT deployed to:", await nft.getAddress());
 }
-
 main().catch((error) => {
   console.error(error);
   process.exitCode = 1;
