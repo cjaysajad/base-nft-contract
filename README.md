@@ -8,7 +8,6 @@ A simple, secure ERC-721 contract for deployment on [Base](https://base.org), bu
 - Owner-only mint (for team allocation / giveaways)
 - Owner withdrawal of collected ETH
 - Reentrancy protection
-
 ## Requirements
 - Node.js v18 or later
 - A wallet with some ETH on Base (or Base Sepolia for testing)
