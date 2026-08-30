@@ -29,7 +29,7 @@ npm test
 
 ## Deploy
 
-Deploy to the testnet (Base Sepolia) first — recommended before mainnet:
+Deploy to the testnet (Base Sepolia) first. Recommended before mainnet:
 ```bash
 npm run deploy:baseSepolia
 ```
