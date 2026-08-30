@@ -40,7 +40,7 @@ npm run deploy:base
 ```
 ## Important notes before a real deployment
 1. Replace the `baseURI` in `scripts/deploy.js` with your actual metadata CID (hosted on IPFS).
-2. Never commit your private key — `.env` is already in `.gitignore`.
+2. Never commit your private key; `.env` is already in `.gitignore`.
 3. Test thoroughly on Base Sepolia before deploying to mainnet.
 4. Consider having the contract reviewed by a security professional before real usage.
 
